@@ -9,6 +9,7 @@ app.use(express.json()); // for parsing application/json
 
 
 let final_data;
+let auth_data;
 // Make a POST request to the registration endpoint
 const getCredentials = async () => {
     const url = 'http://20.244.56.144/test/register';
@@ -34,24 +35,6 @@ const getAuth = async () => {
 
 }
 getAuth();
-
-const data = [
-    {
-        productName: "Laptop 1",
-        price: 2236,
-        rating: 4.7,
-        discount: 63,
-        availability: "yes"
-    },
-    {
-        productName: "Laptop 13",
-        price: 1244,
-        rating: 4.5,
-        discount: 50,
-        availability: "yes"
-    }
-    // Add more mock data as needed
-];
 
 // route for getting all the products
 app.get('/test/companies/:company/categories/:category/products', async (req, res) => {

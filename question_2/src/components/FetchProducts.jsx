@@ -18,6 +18,8 @@ const FetchProducts = () => {
             const res = await fetch('https://fakestoreapi.com/products');
             const data = await res.json();
             setProducts(data);
+            console.log(data);
+            // dispatching the action to set the products in the redux store
             dispatch(productActions.setProducts(data));
     
         }

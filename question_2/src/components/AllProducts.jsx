@@ -6,6 +6,7 @@ const allProducts = () => {
 
     // useSelector is a hook from which gives access to the state
     const products = useSelector(state => state.product.products);
+    console.log(products);
 
   return (
     <div>
@@ -22,7 +23,7 @@ const allProducts = () => {
                                     <p className="card-text">Rating: {product.rating}</p>
                                     <p className="card-text">Discount: {product.discount}</p>
                                     <p className="card-text">Availability: {product.availability}</p>
-                                    <Link to={`/product/${product.Name}`} className="btn btn-primary">View Product</Link>
+                                    <Link to={`/product/${product.productName}`} className="btn btn-primary">View Product</Link>
                                 </div>
                             </div>
                         </div>
